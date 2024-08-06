@@ -2,7 +2,7 @@
 const nextConfig = {
     reactStrictMode: true,
     // Add more configurations if necessary
-    output: 'standalone',
+    output: 'export',
   }
   
 export default nextConfig;
