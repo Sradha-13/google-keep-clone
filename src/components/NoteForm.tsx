@@ -107,7 +107,6 @@ const NoteForm: React.FC = () => {
                     value={color}
                     onChange={(e) => {
                       setColor(e.target.value)
-                      alert(e.target.value)
                       }
                     }
                     className="color-input"
