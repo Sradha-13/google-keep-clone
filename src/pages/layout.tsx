@@ -16,18 +16,18 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   // Filter notes based on search query
-  // const filteredNotes = notes.filter(
-  //   note =>
-  //     note.title.toLowerCase().includes(searchQuery) ||
-  //     note.content.toLowerCase().includes(searchQuery)
-  // );
+  const filteredNotes = notes.filter(
+    note =>
+      note.title.toLowerCase().includes(searchQuery) ||
+      note.content.toLowerCase().includes(searchQuery)
+  );
   return (
     <div className="layout">
       <Sidebar />
       <div className="main-content">
        <TopBar onSearch={handleSearch} />
         {children}
-        <NoteList notes={notes} />
+        <NoteList notes={filteredNotes} />
       </div>
     </div>
   );
